@@ -1,5 +1,5 @@
-import { MessageGateway } from '../../../data/protocols/gateways/Message'
-import { Feature } from '../../../domain/models/protocols/Feature'
+import { MessageGateway } from '@/data/protocols/gateways'
+import { Feature } from '@/domain/models/protocols/Feature'
 
 export class StartBigCornBotFeature implements Feature<void> {
   constructor (

@@ -1,4 +1,4 @@
-import { HttpProvider } from '../../../data/protocols/providers/HttpProvider'
+import { HttpProvider } from '@/data/protocols/providers/HttpProvider'
 
 export class MockedHttpProvider implements HttpProvider {
   async get (url: string): Promise<any> {

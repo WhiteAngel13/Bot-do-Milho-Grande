@@ -1,5 +1,5 @@
 import { HttpProvider } from 'data/protocols/providers/HttpProvider'
-import { MessageGateway } from '../../../data/protocols'
+import { MessageGateway } from '@/data/protocols'
 
 export class ApiMessageGateway implements MessageGateway {
   constructor (

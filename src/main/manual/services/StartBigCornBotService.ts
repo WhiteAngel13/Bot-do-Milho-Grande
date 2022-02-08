@@ -1,4 +1,4 @@
-import { makeStartBigCornBotController } from '../../../main/composition/controllers/makeStartBigCornBotController'
+import { makeStartBigCornBotController } from '@/main/composition/controllers/makeStartBigCornBotController'
 
 export class StartBigCornBotService {
   async exec (): Promise<void> {
