@@ -1,5 +1,5 @@
-import { StartBigCornBotFeature } from 'data/features/start-big-corn-bot/StartBigCornBotFeature'
-import { HttpRequest, HttpResponse, Controller } from 'domain/models'
+import { StartBigCornBotFeature } from '../../../data/features/start-big-corn-bot/StartBigCornBotFeature'
+import { HttpRequest, HttpResponse, Controller } from '../../../domain/models'
 
 export class StartBigCornBotController implements Controller<null> {
   constructor (
