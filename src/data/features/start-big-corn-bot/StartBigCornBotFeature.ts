@@ -1,7 +1,12 @@
+import { MessageGateway } from 'data/protocols/gateways/Message'
 import { Feature } from 'domain/models/protocols/Feature'
 
 export class StartBigCornBotFeature implements Feature<void> {
+  constructor (
+    private readonly messageGateway: MessageGateway
+  ) {}
+
   async perform (data: void): Promise<void> {
-    console.log('Starting big corn bot')
+    await this.messageGateway.sendStartBot()
   }
 }
