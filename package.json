@@ -1,0 +1,23 @@
+{
+  "name": "bot-do-milho-grande",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WhiteAngel13/Bot-do-Milho-Grande.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WhiteAngel13/Bot-do-Milho-Grande/issues"
+  },
+  "homepage": "https://github.com/WhiteAngel13/Bot-do-Milho-Grande#readme",
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
+}
