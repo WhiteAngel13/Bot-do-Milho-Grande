@@ -1,3 +1,3 @@
 export interface MessageSanitizeProvider {
-  sanitize: (message: string) => string
+  sanitize: (message: string) => Promise<string>
 }
