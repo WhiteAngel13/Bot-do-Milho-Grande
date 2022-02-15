@@ -1,7 +1,13 @@
-import { StartBigCornBotService } from './services/StartBigCornBotService'
+import { makeGetMessageFromUserController } from '../composition/controllers/makeGetMessageFromUser'
 
 export const initBot = async (): Promise<void> => {
-  const service = new StartBigCornBotService()
+  const controller = makeGetMessageFromUserController()
 
-  await service.exec()
+  const response = await controller.handle({
+    body: {
+      message: 'oi'
+    }
+  })
+
+  console.log(response)
 }
