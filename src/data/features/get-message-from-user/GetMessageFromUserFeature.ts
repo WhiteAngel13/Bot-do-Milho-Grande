@@ -3,26 +3,24 @@ import { MessageRepository } from '@/data/protocols/repositories/MessageReposito
 import { GetMessageFromUserFeatureDTO } from '@/domain/application/features'
 import { Feature } from '@/domain/models/protocols'
 
-export class GetMessageFromUserFeature implements Feature<GetMessageFromUserFeatureDTO> {
+export class GetMessageFromUserFeature
+implements Feature<GetMessageFromUserFeatureDTO, string | null> {
   constructor (
     private readonly messageSanitizeProvider: MessageSanitizeProvider,
     private readonly messageRepository: MessageRepository
   ) {}
 
-  async perform (data: GetMessageFromUserFeatureDTO): Promise<void> {
+  async perform (data: GetMessageFromUserFeatureDTO): Promise<string | null> {
     const sanitizedMessage = await this.messageSanitizeProvider
       .sanitize(data.message)
 
-    const answer = await this.messageRepository.getAnswer(sanitizedMessage)
+    const answer = await this.messageRepository
+      .getAnswer(sanitizedMessage)
 
     if (!answer) {
-      throw new Error('No answer found')
+      return null
     }
 
-    this.sendMessage(answer)
-  }
-
-  private sendMessage (answer: string): void {
-    console.log(answer)
+    return answer
   }
 }

@@ -1,3 +1,3 @@
-export interface Feature<T> {
-  perform: (data: T) => Promise<void>
+export interface Feature<T, R = void> {
+  perform: (data: T) => Promise<R>
 }
