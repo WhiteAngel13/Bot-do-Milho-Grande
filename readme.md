@@ -14,3 +14,5 @@ class InLocalFileLogRepository implements LogRepository {
   }
 }
 ```
+
+Próxima aula: Vamos estudar extensão de classes abstratas.
