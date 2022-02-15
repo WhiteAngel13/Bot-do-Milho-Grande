@@ -1,11 +1,8 @@
 import './config/module-alias'
-import { StartBigCornBotService } from './manual/services/StartBigCornBotService'
+import { initBot } from './manual'
 
 const main = async (): Promise<void> => {
-  const service = new StartBigCornBotService()
-
-  await service.exec()
+  await initBot()
 }
 
-// eslint-disable-next-line @typescript-eslint/no-floating-promises
-main()
+void main()
